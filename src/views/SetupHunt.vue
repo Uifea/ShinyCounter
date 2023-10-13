@@ -25,9 +25,9 @@
             </div>
             <div class="form__setup--radio">
                 <p>Есть ли шайни чарм?</p>
-                <input type="radio" name="charm" id="no" checked @click="charm == false">
+                <input type="radio" name="charm" id="no" checked @click="removeCharm">
                 <label for="no" class="form__label--radio">Нет</label>
-                <input type="radio" name="charm" id="yes" @click="charm == true">
+                <input type="radio" name="charm" id="yes" @click="addCharm">
                 <label for="yes" class="form__label--radio">Да</label>
             </div>
             <my-button type="submit" class="form__btn" @click="setupHunt">Начать поиск</my-button>
@@ -93,6 +93,12 @@ export default {
                 alert('Ошибка в имени покемона')
                 return
             }
+        },
+        addCharm(){
+            this.form.charm = true;
+        },
+        removeCharm(){
+            this.form.charm = false;
         }
     },
     computed: {

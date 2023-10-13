@@ -1,26 +1,49 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <nav class="navigation">
+      <RouterLink to="/" class="navigation__item">Счетчик</RouterLink>
+      <RouterLink to="/setup" class="navigation__item">Настройки поиска</RouterLink>
+    </nav>
+    <router-view></router-view>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+ 
+
+
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style>
+.app {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+
+    .navigation__item {
+      font-family: 'Comfortaa';
+        font-size: 24px;
+        font-weight: bold;
+        color: #7959c5;
+        margin-right: 15px;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    a.router-link-exact-active {
+        color: #42b983;
+    }
+}
+
+/* .counter__number {
+  
+} */
 </style>

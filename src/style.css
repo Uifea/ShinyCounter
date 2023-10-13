@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Lobster';
+    src: url("assets/fonts/Lobster/Lobster-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url("assets/fonts/Comfortaa/Comfortaa-Regular.ttf");
+}
+
+body {
+    font-size: 24px;
+    font-family: 'Comfortaa';
+}
+
+.card {
+    padding: 15px 20px;
+    width: 650px;
+    background-color: rgb(193 179 209 / 49%);
+    border-radius: 20px;
+    border: 3px solid #cba6df1f;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+  
+.card__image {
+    text-align: center;
+    width: 500px;
+    align-self: center;
+}
+
+.page-header {
+    background-color: blueviolet;
+}
+.page-footer {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
